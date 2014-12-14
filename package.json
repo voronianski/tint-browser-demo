@@ -1,0 +1,19 @@
+{
+  "name": "tint-browser-demo",
+  "version": "0.1.0",
+  "description": "Native desktop browser prototype developed with Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "browser",
+    "tint2",
+    "native",
+    "desktop",
+    "node.js",
+    "ui"
+  ],
+  "author": "Dmitri Voronianski <dmitri.voronianski@gmail.com>",
+  "license": "MIT"
+}
