@@ -2,8 +2,6 @@ require('Application');
 
 application.exitAfterWindowsClose = true;
 
-var os = require('os');
-
 var Screens = require('Screens');
 var Window = require('Window');
 var WebView = require('WebView');
@@ -25,8 +23,6 @@ win.visible = true;
 
 var webView = new WebView();
 win.appendChild(webView);
-
-console.log(os.platform());
 
 webView.useragent = 'User-Agent	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5';
 webView.top = webView.left = webView.right = webView.bottom = 0;
