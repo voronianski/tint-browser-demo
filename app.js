@@ -1,22 +1,28 @@
 require('Application');
 
+application.name = 'Tint Browser';
 application.exitAfterWindowsClose = true;
 
 var Screens = require('Screens');
 var Window = require('Window');
 var WebView = require('WebView');
 
+var menu = require('./src/menu');
+
 // Create main application window
 var win = new Window();
 win.canBeFullscreen = true;
 
 // Access actual screen size for window
-win.width = Screens.active.bounds.width;
+win.width = Screens.active.bounds.width - 300;
 win.height = Screens.active.bounds.height;
-win.x = Screens.active.bounds.x;
+win.x = Screens.active.bounds.x + 300;
 win.y = Screens.active.bounds.y;
 
-win.title = 'Tint Browser';
+win.title = application.name;
+
+// Create application menu
+win.menu = menu.create();
 
 // When all manipulations are done, show window
 win.visible = true;
