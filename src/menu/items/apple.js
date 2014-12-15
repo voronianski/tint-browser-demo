@@ -1,3 +1,4 @@
+var Panel = require('Panel');
 var MenuItemFactory = require('../MenuItemFactory');
 
 var submenus = [{
@@ -5,6 +6,14 @@ var submenus = [{
     separate: true,
     handler: function () {
         console.log('Do smth for about!');
+        var w = new Panel();
+        w.center = '100%';
+        w.width = 300;
+        w.height = 250;
+        w.resizable = false;
+        w.style = 'utility';
+        w.title = 'About';
+        w.visible = true;
     }
 }, {
     title: 'Hide '+application.name,

@@ -2,7 +2,7 @@
   "name": "tint-browser-demo",
   "version": "0.1.0",
   "description": "Native desktop browser prototype developed with Javascript.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
