@@ -2,6 +2,7 @@ var Screens = require('Screens');
 var Window = require('Window');
 
 var mainMenu = require('./menu');
+var mainToolbar = require('./toolbar');
 
 MainWindow = exports;
 
@@ -21,6 +22,9 @@ MainWindow.init = function () {
 
     // Create application menu
     win.menu = mainMenu.create();
+
+    // Create application toolbar
+    win.toolbar = mainToolbar.create();
 
     // Show window when all manipulations are done
     win.visible = true;
