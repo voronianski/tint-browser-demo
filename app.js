@@ -3,6 +3,7 @@ require('Application');
 application.name = 'Tint2 Browser';
 application.exitAfterWindowsClose = true;
 
+var Window = require('Window');
 var mainWindow = require('./src/mainWindow');
 mainWindow.init();
 
@@ -16,4 +17,10 @@ webView.top = webView.left = webView.right = webView.bottom = 0;
 webView.location = 'http://google.com';
 webView.addEventListener('new-window', function () {
     console.log('new window is requested');
+    var newWin = new Window();
+      var newWebView = new WebView();
+      newWin.appendChild(newWebView);
+      newWebView.left=newWebView.right=newWebView.top=newWebView.bottom=0;
+      newWin.visible = true;
+      return newWebView;
 });
